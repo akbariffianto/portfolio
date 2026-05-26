@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akbar | Machine Learning Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ════════════════ NAV ════════════════ -->
+<nav>
+  <a href="#home" class="logo">A</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#about">About &amp; Education</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Sertifikasi, Training &amp; Skills</a></li>
+    <li><a href="#project-1">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu">☰</button>
+</nav>
+
+<main class="wrap" id="main-wrap">
+
+<!-- ════════════════════════════════════
+  HERO — HOME
+════════════════════════════════════ -->
+<section id="home">
+
+  <!-- Left: photo + waves -->
+  <div class="hero-left">
+    <!-- Animated SVG wave bg -->
+    <svg class="hero-waves" viewBox="0 0 600 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="rg1" cx="30%" cy="65%" r="55%">
+          <stop offset="0%" stop-color="#B4FF2D" stop-opacity=".28"/>
+          <stop offset="100%" stop-color="#B4FF2D" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="rg2" cx="72%" cy="28%" r="50%">
+          <stop offset="0%" stop-color="#A855F7" stop-opacity=".32"/>
+          <stop offset="100%" stop-color="#A855F7" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <ellipse cx="170" cy="460" rx="250" ry="200" fill="url(#rg1)"/>
+      <ellipse cx="460" cy="180" rx="200" ry="160" fill="url(#rg2)"/>
+      <!-- Organic blobs -->
+      <path d="M0 350 Q120 220 300 370 Q460 510 600 420 L600 700 L0 700Z" fill="rgba(180,255,45,.055)">
+        <animate attributeName="d" dur="8s" repeatCount="indefinite"
+          values="M0 350 Q120 220 300 370 Q460 510 600 420 L600 700 L0 700Z;
+                  M0 380 Q140 240 310 350 Q470 480 600 400 L600 700 L0 700Z;
+                  M0 350 Q120 220 300 370 Q460 510 600 420 L600 700 L0 700Z"/>
+      </path>
+      <path d="M0 180 Q120 80 300 220 Q450 360 600 280 L600 0 L0 0Z" fill="rgba(168,85,247,.07)">
+        <animate attributeName="d" dur="10s" repeatCount="indefinite"
+          values="M0 180 Q120 80 300 220 Q450 360 600 280 L600 0 L0 0Z;
+                  M0 160 Q140 60 310 200 Q460 340 600 250 L600 0 L0 0Z;
+                  M0 180 Q120 80 300 220 Q450 360 600 280 L600 0 L0 0Z"/>
+      </path>
+      <!-- Flowing lines -->
+      <path d="M30 320 Q180 180 370 300 Q520 420 590 360" stroke="rgba(180,255,45,.35)" stroke-width="1.5" fill="none" stroke-linecap="round">
+        <animate attributeName="stroke-dashoffset" from="600" to="0" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-dasharray" values="0 600;300 300;0 600" dur="3s" repeatCount="indefinite"/>
+      </path>
+      <path d="M20 240 Q200 140 380 240 Q520 340 590 260" stroke="rgba(168,85,247,.3)" stroke-width="1" fill="none" stroke-linecap="round">
+        <animate attributeName="stroke-dashoffset" from="600" to="0" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-dasharray" values="0 600;200 400;0 600" dur="4s" repeatCount="indefinite"/>
+      </path>
+    </svg>
+
+    <!-- Photo card -->
+    <div class="hero-card reveal from-left">
+      <div class="hero-person">
+        <svg width="240" height="320" viewBox="0 0 240 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Glow halos -->
+          <ellipse cx="120" cy="90" rx="60" ry="60" fill="rgba(168,85,247,.08)"/>
+          <!-- Head -->
+          <circle cx="120" cy="88" r="46" fill="#1e1e1e" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+          <!-- Face details -->
+          <ellipse cx="105" cy="88" rx="9" ry="6" fill="rgba(255,255,255,.04)" stroke="rgba(180,255,45,.6)" stroke-width="1.5"/>
+          <ellipse cx="134" cy="88" rx="9" ry="6" fill="rgba(255,255,255,.04)" stroke="rgba(180,255,45,.6)" stroke-width="1.5"/>
+          <line x1="114" y1="88" x2="125" y2="88" stroke="rgba(180,255,45,.6)" stroke-width="1.5"/>
+          <!-- Pupils -->
+          <circle cx="105" cy="88" r="3" fill="rgba(180,255,45,.4)"/>
+          <circle cx="134" cy="88" r="3" fill="rgba(180,255,45,.4)"/>
+          <!-- Headphones arc -->
+          <path d="M74 86 Q74 44 120 44 Q166 44 166 86" stroke="rgba(168,85,247,.85)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <rect x="68" y="80" width="13" height="19" rx="6.5" fill="rgba(168,85,247,.7)"/>
+          <rect x="159" y="80" width="13" height="19" rx="6.5" fill="rgba(168,85,247,.7)"/>
+          <!-- Mouth suggestion -->
+          <path d="M110 102 Q120 108 130 102" stroke="rgba(255,255,255,.15)" stroke-width="1" fill="none" stroke-linecap="round"/>
+          <!-- Body -->
+          <path d="M50 200 Q54 158 120 148 Q186 158 190 200 L196 320 L44 320Z" fill="#181818"/>
+          <path d="M105 148 L120 172 L135 148" stroke="rgba(255,255,255,.07)" stroke-width="1" fill="none"/>
+          <!-- collar detail -->
+          <path d="M108 148 L120 168 L132 148" stroke="rgba(180,255,45,.15)" stroke-width="1" fill="none"/>
+          <!-- Ground line glow -->
+          <ellipse cx="120" cy="315" rx="70" ry="8" fill="rgba(180,255,45,.12)"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="scroll-hint">SCROLL</div>
+  </div>
+
+  <!-- Right: text -->
+  <div class="hero-right">
+    <div class="hero-intro tr1">
+      <span class="hello-pill">👋 Hello!</span>
+    </div>
+
+    <h1 class="hero-heading">
+      <div class="tr2">I'm <span class="hl-g">Akbar,</span></div>
+      <div class="tr3">I'm a <span class="hl-p">Machine<br>Learning Engineer</span></div>
+    </h1>
+
+    <p class="hero-desc tr4">
+      Dedicated to building
+      <span class="ib g">Machine Learning</span> or
+      <span class="ib p">AI Solutions</span>
+      to the final stage, by combining
+      <span class="ib g">Cloud Solutions</span>
+      into every deployed system.
+    </p>
+
+    <div class="hero-cta tr5">
+      <button class="btn-primary" onclick="scrollTo('about')">View My Work ↓</button>
+      <button class="btn-ghost">Download CV</button>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+  ABOUT & EDUCATION
+════════════════════════════════════ -->
+<section id="about">
+  <div class="mle-mark">MLE</div>
+  <div class="about-inner">
+
+    <div class="a-panel reveal from-left">
+      <h2 class="sec-title" style="color:var(--purple);margin-bottom:18px">About Me</h2>
+      <p class="a-text">Informatics graduate specializing in Machine Learning and Deep Learning, backed by training from Bangkit Academy and AWS re/Start. Proficient in Python, TensorFlow, PyTorch, front-end integration, and cloud architectures.</p>
+      <p class="a-text d2">Certified via DCML (TensorFlow) and Associate Data Scientist (BNSP). Expert in building scalable end-to-end ML pipelines from modeling to cloud deployment. Ready to deliver immediate value as a Data Scientist or ML Engineer.</p>
+      <p class="a-text d3" style="margin-top:14px;display:flex;flex-wrap:wrap;gap:8px">
+        <span class="badge b-outline-green">Machine Learning</span>
+        <span class="badge b-outline-purple">Deep Learning</span>
+        <span class="badge b-outline-green">MLOps</span>
+        <span class="badge b-outline-purple">Cloud Architecture</span>
+      </p>
+    </div>
+
+    <div class="a-panel reveal from-right d2">
+      <h2 class="sec-title" style="color:var(--green);margin-bottom:20px">Education</h2>
+      <ul class="edu-list">
+        <li class="edu-item reveal d1">
+          <div class="edu-degree">Bachelor of Computer Science</div>
+          <div class="edu-inst">Universitas Pembangunan Nasional Veteran Yogyakarta</div>
+          <span class="date-tag">2022 – 2026</span>
+          <div class="edu-gpa">GPA: 3.78 / 4.00</div>
+          <div class="edu-thesis"><strong>Thesis:</strong> Minority Class Optimization in Skin Disease Classification Using AC-WGAN with Gradient Penalty-Based Data Augmentation</div>
+        </li>
+        <li class="edu-item reveal d2">
+          <div class="edu-degree">Bangkit Academy led by Google, GoTo, &amp; Traveloka</div>
+          <div class="edu-inst">Machine Learning Cohort — Batch 2 2024</div>
+          <span class="date-tag">Sep 2024 – Dec 2024</span>
+          <ul class="edu-bullets">
+            <li>Selected as one of 4,636 participants from a highly competitive pool of 45,000+ applicants across 400 Indonesian universities. Completed a rigorous incubator program focused on advanced technical competencies, soft skills, and professional English to accelerate career readiness in the technology sector.</li>
+            <li>Graduated from the Machine Learning path with an outstanding final average score of <strong>94.02/100</strong>. Mastered comprehensive technical competencies across 12 modules, including deep learning, Generative Adversarial Networks (GANs), data analysis, and TensorFlow deployment.</li>
+            <li>Launched the <strong>"derma.aid"</strong> skin disease prediction capstone as Team Lead and Machine Learning Engineer. Boosted model accuracy by <strong>16%</strong> by implementing a pre-trained ResNet50 model, applying L1/L2 regularization, and optimizing the dataset with distinct, separated data augmentation transformations.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+  EXPERIENCE
+════════════════════════════════════ -->
+<section id="experience">
+  <div style="position:absolute;top:-80px;right:-80px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(168,85,247,.16) 0%,transparent 70%);pointer-events:none"></div>
+  <div style="position:absolute;bottom:-60px;left:-60px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(180,255,45,.09) 0%,transparent 70%);pointer-events:none"></div>
+
+  <div style="max-width:1100px;width:100%;margin:0 auto;padding:40px 0">
+    <div class="reveal" style="text-align:center;margin-bottom:32px">
+      <span class="badge b-purple" style="margin-bottom:14px;display:inline-block">Work History</span>
+      <div class="exp-big-title">Work Experience</div>
+    </div>
+
+    <div class="exp-grid">
+      <div class="exp-card reveal d1" style="grid-column:1/-1">
+        <div class="exp-co">Refactory <span class="exp-loc">| Yogyakarta, Indonesia</span></div>
+        <div class="exp-role">Junior Full-Stack Engineer Trainee</div>
+        <span class="date-tag">March 2026 – May 2026</span>
+
+        <ul class="exp-bullets">
+          <li>Developed a Vendor Portal automating invoice submission and payment request workflows, eliminating manual bottlenecks and data loss risks.</li>
+          <li>Built Shopee API &amp; ERP integration middleware that automatically extracts and maps e-commerce data into corporate ERP, removing manual data handling.</li>
+          <li>Applied Spec-Driven Development and AI-assisted coding (OpenCode) to accelerate feature delivery and maintain cross-team architectural alignment.</li>
+        </ul>
+
+        <div class="exp-stack"><strong>Stack: .NET, React, Vue, Supabase, Golang, Docker, TailwindCSS, Jenkins, & Kubernetes</strong> </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+  SERTIFIKASI, TRAINING & SKILLS
+════════════════════════════════════ -->
+<section id="skills">
+  <div style="max-width:1200px;width:100%;margin:0 auto;padding:36px 0">
+    <div class="reveal" style="text-align:center;margin-bottom:26px">
+      <h2 class="sec-title">Sertifikasi, Training &amp; <span class="hl-g">Skills</span></h2>
+    </div>
+
+    <div class="skills-grid">
+
+      <!-- CERTS -->
+      <div class="sk-panel reveal d1">
+        <div class="sk-panel-title"><div class="sk-icon g">🏅</div>Sertifikasi</div>
+        <ul class="cert-list" id="cert-list"></ul>
+      </div>
+
+      <!-- TRAINING -->
+      <div class="sk-panel reveal d2">
+        <div class="sk-panel-title"><div class="sk-icon p">🎓</div>Training</div>
+        <ul class="train-list" id="train-list"></ul>
+      </div>
+
+      <!-- SKILLS (rendered by JS) -->
+      <div class="sk-panel reveal d3">
+        <div class="sk-panel-title"><div class="sk-icon g">🛠️</div>Skills</div>
+        <div id="skills-content"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+  PROJECT 1
+════════════════════════════════════ -->
+<section id="project-1" class="proj-sec">
+  <div class="proj-visual reveal from-left">
+    <div class="proj-vis-bg">
+      <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="120" cy="400" rx="200" ry="180" fill="rgba(180,255,45,.07)"/>
+        <ellipse cx="400" cy="180" rx="160" ry="140" fill="rgba(168,85,247,.09)"/>
+      </svg>
+    </div>
+    <div class="proj-preview">
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <span class="badge b-outline-green">Model Training Performance</span>
+        </div>
+        <div class="chart-card-body">
+          <p>This chart displays the model's performance during the training and validation phases. The validation accuracy (val_accuracy) consistently increased with each training cycle (epoch), peaking at around 86%, while the validation loss (val_loss) showed a steady decrease. This visualization proves that the model developed learned effectively without significant overfitting.</p>
+        </div>
+        <div class="chart-card-footer">
+          <div class="chart-stat">
+            <span class="chart-stat-num" style="color:var(--green)">86%</span>
+            <span class="chart-stat-lbl">Val Accuracy</span>
+          </div>
+          <div class="chart-stat">
+            <span class="chart-stat-num" style="color:var(--purple)">ResNet50</span>
+            <span class="chart-stat-lbl">Architecture</span>
+          </div>
+          <div class="chart-stat">
+            <span class="chart-stat-num">4K</span>
+            <span class="chart-stat-lbl">Images/Class</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="proj-content">
+    <div class="proj-num reveal d1">01 / 05</div>
+    <h2 class="proj-name reveal d2">Derma.<span class="hl-g">Aid</span></h2>
+    <div class="proj-meta reveal d3">
+      <span class="proj-meta-tag"><strong>December 2024</strong></span>
+      <span class="proj-meta-tag"><strong>Role:</strong> Project Leader &amp; Machine Learning Engineer</span>
+    </div>
+    <p class="proj-desc reveal d4">The Derma.Aid project was created to address the gap in skin healthcare in Indonesia, especially in remote areas like Sumba, NTT, which have very limited access to dermatologists. Skin diseases rank as the third most common illness in the country, yet there is an uneven distribution of specialists. To tackle these challenges, we developed Derma.Aid, an AI-based teledermatology application that provides fast, secure, and private early diagnoses.</p>
+    <p class="proj-desc reveal d5">As the Machine Learning Engineer, my primary responsibility was building the skin disease detection model. The model was built using TensorFlow and transfer learning with the ResNet50 architecture. We balanced the dataset to 4,000 images per class using oversampling/undersampling techniques and trained it on Google Colab using a T4 GPU. The optimized model achieved 86% accuracy on validation data and was saved in both .keras and .tflite formats for cloud and mobile deployment.</p>
+    <div class="proj-actions reveal d6">
+      <a href="https://github.com/DermaAid/DermaAid-ML" target="_blank" rel="noopener noreferrer" class="act-btn act-gh">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.3-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
+        GitHub
+      </a>
+      <span class="act-btn act-demo disabled">
+        Demo N/A
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17l9-9M17 17V8H8"/></svg>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+  PROJECT 2
+════════════════════════════════════ -->
+<section id="project-2" class="proj-sec alt">
+  <div class="proj-content">
+    <div class="proj-num reveal d1">02 / 05</div>
+    <h2 class="proj-name reveal d2">MLOps <span class="hl-p">Loan Approval</span></h2>
+    <div class="proj-meta reveal d3">
+      <span class="proj-meta-tag"><strong>February 2025</strong></span>
+      <span class="proj-meta-tag"><strong>Role:</strong> Machine Learning Developer</span>
+    </div>
+    <p class="proj-desc reveal d4">This project automates the loan approval process by building a scalable, automated machine learning pipeline to predict applicant eligibility based on data fields like income and credit history. Built using TensorFlow Extended (TFX) and integrated with TensorFlow Transform (TFT), the system automates the entire lifecycle from robust feature engineering to automated data validation, addressing the critical real-world need for production-grade maintainability in financial context deployment.</p>
+    <p class="proj-desc reveal d5">The architecture features a Keras-based deep learning model optimized via Keras Tuner, achieving an 82.9% binary accuracy and an AUC score of 0.812. The final containerized pipeline is served via TF-Serving with Docker and deployed to the cloud on the Railway platform. To ensure long-term stability and system reliability, a continuous observability monitoring stack was established using Prometheus and Grafana to visualize real-time performance metrics.</p>
+    <div class="proj-actions reveal d6">
+      <a href="https://github.com/akbariffianto/mlops-loan-approval" target="_blank" rel="noopener noreferrer" class="act-btn act-gh">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.3-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
+        GitHub
+      </a>
+      <span class="act-btn act-demo disabled">
+        Demo N/A
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17l9-9M17 17V8H8"/></svg>
+      </span>
+    </div>
+  </div>
+
+  <div class="proj-visual reveal from-right" style="background:linear-gradient(135deg,#0f0820,#1a1a1a)">
+    <div class="proj-vis-bg">
+      <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="380" cy="200" rx="200" ry="180" fill="rgba(168,85,247,.09)"/>
+        <ellipse cx="150" cy="450" rx="160" ry="140" fill="rgba(180,255,45,.05)"/>
+      </svg>
+    </div>
+    <div class="proj-preview">
+      <div class="monitor-card">
+        <div class="monitor-card-header">
+          <span class="badge b-outline-purple">Production Monitoring</span>
+          <span class="badge b-outline-green">Grafana + Prometheus</span>
+        </div>
+        <div class="monitor-card-body">
+          <div class="monitor-metrics">
+            <div class="monitor-metric">
+              <span class="monitor-metric-icon" style="color:var(--green)">◆</span>
+              <div>
+                <span class="monitor-metric-num" style="color:var(--green)">82.9%</span>
+                <span class="monitor-metric-lbl">Binary Accuracy</span>
+              </div>
+            </div>
+            <div class="monitor-metric">
+              <span class="monitor-metric-icon" style="color:var(--purple)">■</span>
+              <div>
+                <span class="monitor-metric-num" style="color:var(--purple)">0.812</span>
+                <span class="monitor-metric-lbl">AUC Score</span>
+              </div>
+            </div>
+            <div class="monitor-metric">
+              <span class="monitor-metric-icon" style="color:var(--muted)">●</span>
+              <div>
+                <span class="monitor-metric-num">TFX</span>
+                <span class="monitor-metric-lbl">Pipeline</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="monitor-card-text">
+          <p>The final pipeline features a robust production monitoring setup. Utilizing Prometheus to track latency and request volumes alongside interactive Grafana dashboards, the platform ensures continuous model evaluation. This MLOps structure effectively guarantees that the deployed loan prediction model handles real-time inference seamlessly while preventing system drift and validation loss anomalies.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+  PROJECT 3
+════════════════════════════════════ -->
+<section id="project-3" class="proj-sec">
+  <div class="proj-visual reveal from-left" style="background:linear-gradient(135deg,#081208,#1a1a1a)">
+    <div class="proj-vis-bg">
+      <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="100" cy="350" rx="200" ry="160" fill="rgba(180,255,45,.07)"/>
+      </svg>
+    </div>
+    <div class="proj-preview">
+      <div class="regression-card">
+        <div class="regression-card-header">
+          <span class="badge b-outline-green">Model Evaluation</span>
+          <span class="badge b-outline-purple">Gradient Boosting</span>
+        </div>
+        <div class="regression-card-body">
+          <div class="regression-metrics">
+            <div class="regression-metric regression-metric-main">
+              <span class="regression-metric-num" style="color:var(--green)">MAE &lt; 10%</span>
+              <span class="regression-metric-lbl">Mean Absolute Error</span>
+            </div>
+            <div class="regression-metric-row">
+              <div class="regression-metric regression-metric-sm">
+                <span class="regression-metric-num" style="color:var(--purple)">4</span>
+                <span class="regression-metric-lbl">Models Tested</span>
+              </div>
+              <div class="regression-metric regression-metric-sm">
+                <span class="regression-metric-num" style="color:var(--green)">GB</span>
+                <span class="regression-metric-lbl">Best Performer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="regression-card-text">
+          <p>Model Evaluation & Error Minimization: This section highlights the comparative performance analysis of the regression models. Following systematic hyperparameter tuning, the optimized Gradient Boosting model achieved a Mean Absolute Error (MAE) under 10%. This metric validates the model's high predictive accuracy and training efficiency, establishing it as a highly stable solution for market valuation tasks.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="proj-content">
+    <div class="proj-num reveal d1">03 / 05</div>
+    <h2 class="proj-name reveal d2">Real Estate <span class="hl-g">Price Prediction</span></h2>
+    <div class="proj-meta reveal d3">
+      <span class="proj-meta-tag"><strong>December 2024</strong></span>
+      <span class="proj-meta-tag"><strong>Role:</strong> Project Leader &amp; Machine Learning Engineer</span>
+    </div>
+    <p class="proj-desc reveal d4">This project focuses on building an accurate end-to-end regression system to predict real estate prices, providing critical data-driven insights for agents and stakeholders to set competitive market prices. The workflow initiated with comprehensive Exploratory Data Analysis (EDA), robust data cleaning, and advanced correlation methods—such as Spearman analysis—to evaluate feature relationships and clean outliers before modeling.</p>
+    <p class="proj-desc reveal d5">To find the most optimal algorithm, a systematic evaluation was conducted across four distinct models: K-Nearest Neighbors, Random Forest, AdaBoost, and Gradient Boosting. The core breakthrough involved intensive hyperparameter tuning on the Gradient Boosting model. This careful optimization minimized prediction error, successfully reducing the Mean Absolute Error (MAE) to under 10% to ensure high reliability for deployment.</p>
+    <div class="proj-actions reveal d6">
+      <a href="https://github.com/DermaAid/DermaAid-ML" target="_blank" rel="noopener noreferrer" class="act-btn act-gh">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.3-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
+        GitHub
+      </a>
+      <span class="act-btn act-demo disabled">
+        Demo N/A
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17l9-9M17 17V8H8"/></svg>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+  PROJECT 4
+════════════════════════════════════ -->
+<section id="project-4" class="proj-sec alt">
+  <div class="proj-content">
+    <div class="proj-num reveal d1">04 / 05</div>
+    <h2 class="proj-name reveal d2"><span class="hl-p">Safe</span>Space</h2>
+    <div class="proj-meta reveal d3">
+      <span class="proj-meta-tag"><strong>February 2026</strong></span>
+      <span class="proj-meta-tag"><strong>Role:</strong> Hacker &amp; Backend Developer</span>
+    </div>
+    <p class="proj-desc reveal d4">Engineered as part of the Refactory Hackathon, SafeSpace features a highly scalable backend built with FastAPI, PostgreSQL, and asynchronous SQLAlchemy. Developed using a strict Spec-Driven Development methodology with OpenSpec to design robust architectural alignment, the entire containerized application was successfully deployed into a Kubernetes cluster via Docker to ensure high availability and efficient infrastructure orchestration.</p>
+    <p class="proj-desc reveal d5">The platform spearheaded the integration of Gemini LLM (Google Generative AI) to architect an automated reporting API that intelligently processes incident logs into formal complaint forms. Adhering to a strictly privacy-first architecture, the system implements anonymous session management utilizing UUID4 identifiers alongside strict data lifecycle enforcement—such as cascade and hard-delete mechanisms—guaranteeing permanent removal of sensitive user data.</p>
+    <div class="proj-actions reveal d6">
+      <a href="https://github.com/Anything-But-Revisi" target="_blank" rel="noopener noreferrer" class="act-btn act-gh">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.3-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
+        GitHub
+      </a>
+      <span class="act-btn act-demo disabled">
+        Demo N/A
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17l9-9M17 17V8H8"/></svg>
+      </span>
+    </div>
+  </div>
+
+  <div class="proj-visual reveal from-right" style="background:linear-gradient(135deg,#120820,#1a1a1a)">
+    <div class="proj-vis-bg">
+      <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="380" cy="250" rx="220" ry="180" fill="rgba(168,85,247,.1)"/>
+      </svg>
+    </div>
+    <div class="proj-preview">
+      <div class="safespace-card">
+        <div class="safespace-card-header">
+          <span class="badge b-outline-purple">Automated Workflows</span>
+          <span class="badge b-outline-green">Privacy-First</span>
+        </div>
+        <div class="safespace-card-body">
+          <div class="safespace-stack">
+            <div class="safespace-stack-item">
+              <span class="safespace-stack-icon" style="color:var(--purple)">⚡</span>
+              <div>
+                <span class="safespace-stack-name">FastAPI + Async SQLAlchemy</span>
+                <span class="safespace-stack-lbl">Backend Stack</span>
+              </div>
+            </div>
+            <div class="safespace-stack-item">
+              <span class="safespace-stack-icon" style="color:var(--green)">🧠</span>
+              <div>
+                <span class="safespace-stack-name">Gemini LLM Integration</span>
+                <span class="safespace-stack-lbl">Auto-Reporting API</span>
+              </div>
+            </div>
+            <div class="safespace-stack-item">
+              <span class="safespace-stack-icon" style="color:var(--muted)">🔒</span>
+              <div>
+                <span class="safespace-stack-name">UUID4 + Cascade Deletes</span>
+                <span class="safespace-stack-lbl">Anonymous Data Lifecycle</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="safespace-card-text">
+          <p>Automated Workflows &amp; Secure Data Lifecycles: This architecture highlights the seamless combination of asynchronous API endpoints and generative AI automation. By maintaining asynchronous database connections and a localized Kubernetes cluster layout, the API safely transforms raw data into structured incident forms while enforcing strict cryptographic and database policies to preserve complete user anonymity and data safety.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+  PROJECT 5
+════════════════════════════════════ -->
+<section id="project-5" class="proj-sec">
+  <div class="proj-visual reveal from-left" style="background:linear-gradient(135deg,#081408,#1a1a1a)">
+    <div class="proj-vis-bg">
+      <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="150" cy="380" rx="200" ry="160" fill="rgba(180,255,45,.07)"/>
+      </svg>
+    </div>
+    <div class="proj-preview">
+      <div class="afc-card">
+        <div class="afc-card-header">
+          <span class="badge b-outline-green">Isolation Forest</span>
+          <span class="badge b-outline-purple">XAI Explainer</span>
+        </div>
+        <div class="afc-card-body">
+          <div class="afc-pipeline">
+            <div class="afc-pipe-step">
+              <div class="afc-pipe-dot" style="background:var(--green)"></div>
+              <div class="afc-pipe-line"></div>
+              <div>
+                <span class="afc-pipe-name">Schema Validator</span>
+                <span class="afc-pipe-lbl">Ingestion Gate</span>
+              </div>
+            </div>
+            <div class="afc-pipe-step">
+              <div class="afc-pipe-dot" style="background:var(--purple)"></div>
+              <div class="afc-pipe-line"></div>
+              <div>
+                <span class="afc-pipe-name">Isolation Forest</span>
+                <span class="afc-pipe-lbl">Anomaly Detection</span>
+              </div>
+            </div>
+            <div class="afc-pipe-step">
+              <div class="afc-pipe-dot" style="background:var(--muted)"></div>
+              <div class="afc-pipe-line afc-pipe-line-last"></div>
+              <div>
+                <span class="afc-pipe-name">XAI Explainer</span>
+                <span class="afc-pipe-lbl">Compliance Logs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="afc-card-text">
+          <p>Continuous Evaluation &amp; Explainable AI: This layout displays the modular orchestration of the AFC-CAE pipeline. It maps the automated transition from raw data ingestion and schema gating, through the Isolation Forest anomaly detection, to the generation of regulatory compliance logs. The architecture guarantees a highly secure, traceable, and sub-second evaluation workflow suitable for high-throughput enterprise risk mitigation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="proj-content">
+    <div class="proj-num reveal d1">05 / 05</div>
+    <h2 class="proj-name reveal d2">AFC-CAE <span class="hl-g">Engine</span></h2>
+    <div class="proj-meta reveal d3">
+      <span class="proj-meta-tag"><strong>2026</strong></span>
+      <span class="proj-meta-tag"><strong>Role:</strong> ML Engineer &amp; Backend Developer</span>
+    </div>
+    <p class="proj-desc reveal d4">The Anti-Financial Crime - Continuous Audit &amp; Evaluation (AFC-CAE) Engine is an enterprise-grade automated compliance system engineered to detect financial anomalies and streamline regulatory auditing. Built with a high-performance backend using FastAPI and structured through a secure, containerized architecture via Docker, the engine processes massive multi-part loan and transaction datasets, providing financial institutions with instant evaluation capabilities against fraud and policy drifts.</p>
+    <p class="proj-desc reveal d5">The core intelligence features an advanced ML layer integrating an Isolation Forest algorithm for unsupervised anomaly detection, combined with an XAI (Explainable AI) Explainer to ensure transparency and compliance validation. Data integrity is guaranteed via a strict Ingestion Layer utilizing a custom Schema Validator and Dtype Gate, while the specialized audit modules run deterministic compliance assertions to block high-risk activities before downstream orchestration.</p>
+    <div class="proj-actions reveal d6">
+      <a href="#" class="act-btn act-gh">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.3-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
+        GitHub
+      </a>
+      <span class="act-btn act-demo disabled">
+        Demo N/A
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17l9-9M17 17V8H8"/></svg>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+  CONTACT
+════════════════════════════════════ -->
+<section id="contact">
+  <div style="max-width:880px;width:100%;display:flex;flex-direction:column;align-items:center;padding:44px 0;gap:36px">
+
+    <div style="text-align:center">
+      <h2 class="reveal" style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(30px,4.5vw,56px);line-height:1.1">
+        Get In <span class="hl-g">Touch</span>
+      </h2>
+      <p class="reveal d1" style="font-size:13px;color:var(--muted);margin-top:10px;max-width:400px">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus.
+      </p>
+    </div>
+
+    <div class="contact-cards">
+      <div class="c-card reveal d1">
+        <div class="c-icon g">✉️</div>
+        <div class="c-lbl">Email</div>
+        <div class="c-detail">akbar.lorem@ipsum.com<br>Lorem ipsum dolor sit amet consectetur adipiscing.</div>
+        <button class="c-btn">Send Email</button>
+      </div>
+      <div class="c-card reveal d2">
+        <div class="c-icon g">💬</div>
+        <div class="c-lbl">WhatsApp</div>
+        <div class="c-detail">+62 821 xxxx xxxx<br>Consectetur adipiscing elit ut aliquam purus sit.</div>
+        <button class="c-btn">Message</button>
+      </div>
+      <div class="c-card reveal d3">
+        <div class="c-icon p">💼</div>
+        <div class="c-lbl">LinkedIn</div>
+        <div class="c-detail">linkedin.com/in/akbar-lorem<br>Pellentesque habitant morbi tristique senectus netus.</div>
+        <button class="c-btn">Connect</button>
+      </div>
+    </div>
+
+    <div class="reveal d4" style="font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);text-align:center">
+      Designed &amp; Built by <span style="color:var(--green)">Akbar</span> · © 2025 · Machine Learning Engineer
+    </div>
+  </div>
+</section>
+
+</main><!-- /wrap -->
+
+<div class="modal-overlay" id="cert-modal">
+  <div class="modal-box">
+    <p class="modal-msg">Are you sure you want to view this certificate?</p>
+    <div class="modal-actions">
+      <button class="modal-btn modal-btn-yes" id="modal-yes">Yes, Open Link</button>
+      <button class="modal-btn modal-btn-no" id="modal-no">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
