@@ -238,3 +238,120 @@ trainList?.addEventListener('click',e=>{
     if(url) openModal(url);
   }
 });
+
+// ═══════════════════════════════════════════════════════════════
+// IMAGE VIEWER MODAL
+// ═══════════════════════════════════════════════════════════════
+
+const imgModal = document.getElementById('img-modal');
+const imgModalBody = document.getElementById('img-modal-body');
+const imgFull = document.getElementById('img-modal-full');
+const imgClose = document.getElementById('img-modal-close');
+const zoomIn = document.getElementById('img-zoom-in');
+const zoomOut = document.getElementById('img-zoom-out');
+const zoomReset = document.getElementById('img-zoom-reset');
+
+let zoomLevel = 1;
+let isDragging = false;
+let dragStart = { x: 0, y: 0 };
+let dragOffset = { x: 0, y: 0 };
+
+function openImgModal(src){
+  imgFull.src = src;
+  zoomLevel = 1;
+  dragOffset = { x: 0, y: 0 };
+  updateZoom();
+  imgModal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeImgModal(){
+  imgModal.classList.remove('open');
+  document.body.style.overflow = '';
+  imgFull.src = '';
+}
+
+function updateZoom(){
+  imgFull.style.transform = `translate(${dragOffset.x}px,${dragOffset.y}px) scale(${zoomLevel})`;
+}
+
+imgClose.addEventListener('click',closeImgModal);
+
+imgModal.addEventListener('click',e=>{
+  if(e.target === imgModal) closeImgModal();
+});
+
+document.addEventListener('keydown',e=>{
+  if(!imgModal.classList.contains('open')) return;
+  if(e.key === 'Escape') closeImgModal();
+  if(e.key === '+' || e.key === '='){ e.preventDefault(); zoomIn.click(); }
+  if(e.key === '-'){ e.preventDefault(); zoomOut.click(); }
+  if(e.key === '0'){ e.preventDefault(); zoomReset.click(); }
+});
+
+zoomIn.addEventListener('click',()=>{
+  zoomLevel = Math.min(5, zoomLevel + 0.25);
+  updateZoom();
+});
+
+zoomOut.addEventListener('click',()=>{
+  zoomLevel = Math.max(0.25, zoomLevel - 0.25);
+  updateZoom();
+});
+
+zoomReset.addEventListener('click',()=>{
+  zoomLevel = 1;
+  dragOffset = { x: 0, y: 0 };
+  updateZoom();
+});
+
+imgModalBody.addEventListener('wheel',e=>{
+  if(!imgModal.classList.contains('open')) return;
+  e.preventDefault();
+  const delta = e.deltaY > 0 ? -0.1 : 0.1;
+  zoomLevel = Math.max(0.25, Math.min(5, zoomLevel + delta));
+  updateZoom();
+},{passive:false});
+
+imgModalBody.addEventListener('mousedown',e=>{
+  if(zoomLevel <= 1) return;
+  isDragging = true;
+  imgModalBody.classList.add('dragging');
+  dragStart = { x: e.clientX - dragOffset.x, y: e.clientY - dragOffset.y };
+});
+
+document.addEventListener('mousemove',e=>{
+  if(!isDragging) return;
+  dragOffset.x = e.clientX - dragStart.x;
+  dragOffset.y = e.clientY - dragStart.y;
+  updateZoom();
+});
+
+document.addEventListener('mouseup',()=>{
+  isDragging = false;
+  imgModalBody.classList.remove('dragging');
+});
+
+imgModalBody.addEventListener('touchstart',e=>{
+  if(zoomLevel <= 1) return;
+  const t = e.touches[0];
+  isDragging = true;
+  dragStart = { x: t.clientX - dragOffset.x, y: t.clientY - dragOffset.y };
+},{passive:true});
+
+document.addEventListener('touchmove',e=>{
+  if(!isDragging) return;
+  const t = e.touches[0];
+  dragOffset.x = t.clientX - dragStart.x;
+  dragOffset.y = t.clientY - dragStart.y;
+  updateZoom();
+},{passive:true});
+
+document.addEventListener('touchend',()=>{
+  isDragging = false;
+});
+
+document.querySelector('.wrap').addEventListener('click',e=>{
+  const img = e.target.closest('.proj-img');
+  if(img) openImgModal(img.src);
+});

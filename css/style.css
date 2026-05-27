@@ -396,6 +396,41 @@ nav{
   overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.6);
 }
 
+.proj-img-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:6px;padding:6px;height:100%;
+}
+.proj-img-wrap{
+  overflow:hidden;border-radius:8px;cursor:pointer;
+  border:1px solid var(--border);transition:border-color .25s;
+  position:relative;background:var(--panel);
+}
+.proj-img-wrap:hover{border-color:var(--green)}
+.proj-img-wrap::after{
+  content:'\2197';position:absolute;top:6px;right:8px;
+  font-size:12px;color:#fff;opacity:0;
+  transition:opacity .25s;text-shadow:0 1px 4px rgba(0,0,0,.7);
+  pointer-events:none;
+}
+.proj-img-wrap:hover::after{opacity:1}
+.proj-img{
+  width:100%;height:100%;display:block;
+  object-fit:cover;transition:transform .35s ease;
+}
+.proj-img-wrap:hover .proj-img{transform:scale(1.04)}
+.proj-img-summary{
+  position:absolute;bottom:0;left:0;right:0;
+  display:flex;flex-wrap:wrap;gap:6px;
+  padding:12px 14px;
+  background:linear-gradient(transparent,rgba(0,0,0,.82) 35%);
+  pointer-events:none;
+}
+.proj-img-summary .badge{
+  pointer-events:auto;
+  font-size:10px;padding:3px 10px;
+  backdrop-filter:blur(4px);
+}
+
 .dash{padding:14px;height:100%;display:flex;flex-direction:column;gap:10px}
 .dash-row{display:flex;gap:8px}
 .dash-stat-card{
@@ -697,6 +732,64 @@ nav{
 .modal-btn-no:hover{border-color:var(--purple);color:var(--purple)}
 
 /* ==========================================
+   IMAGE VIEWER MODAL
+   ========================================== */
+#img-modal{z-index:1000}
+#img-modal .img-modal-box{
+  position:relative;
+  width:92vw;height:92vh;
+  max-width:1400px;max-height:95vh;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(0,0,0,0);border:none;
+  transform:scale(.94);transition:transform .3s ease;
+}
+#img-modal.open .img-modal-box{transform:scale(1)}
+.img-modal-close{
+  position:absolute;top:-42px;right:0;
+  background:none;border:none;color:var(--text);
+  font-size:32px;cursor:pointer;line-height:1;padding:4px 8px;
+  transition:color .2s,transform .2s;z-index:10;
+}
+.img-modal-close:hover{color:var(--green);transform:rotate(90deg)}
+.img-modal-controls{
+  position:absolute;bottom:-44px;left:50%;transform:translateX(-50%);
+  display:flex;gap:10px;z-index:10;
+}
+.img-ctrl-btn{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--panel2);border:1px solid var(--border);
+  color:var(--text);font-size:18px;cursor:pointer;line-height:1;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Space Mono',monospace;font-weight:700;
+  transition:background .2s,border-color .2s,transform .2s;
+}
+.img-ctrl-btn:hover{background:var(--panel);border-color:var(--green);transform:scale(1.08)}
+.img-modal-body{
+  width:100%;height:100%;overflow:hidden;border-radius:var(--r);
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(0,0,0,.85);border:1px solid var(--border);
+  cursor:grab;
+}
+.img-modal-body.dragging{cursor:grabbing}
+#img-modal-full{
+  max-width:100%;max-height:100%;
+  object-fit:contain;display:block;
+  transition:transform .2s ease;
+  user-select:none;-webkit-user-drag:none;
+  pointer-events:none;
+}
+@media(max-width:900px){
+  #img-modal .img-modal-box{width:96vw;height:85vh}
+  .img-modal-controls{bottom:-40px}
+  .img-modal-close{top:-38px;font-size:28px}
+}
+@media(max-width:480px){
+  #img-modal .img-modal-box{width:98vw;height:80vh}
+  .img-modal-close{top:-34px;font-size:24px}
+  .img-ctrl-btn{width:32px;height:32px;font-size:15px}
+}
+
+/* ==========================================
    MOBILE NAV TOGGLE
    ========================================== */
 .nav-toggle{
@@ -754,6 +847,9 @@ nav{
   .proj-visual{flex:none;padding:24px 16px}
   .proj-preview{width:94%;aspect-ratio:16/11}
   .proj-visual.reveal,.proj-visual.reveal.from-left,.proj-visual.reveal.from-right{transform:none}
+  .proj-img-grid{grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:4px;padding:4px}
+  .proj-img-summary{padding:8px 10px;gap:4px}
+  .proj-img-summary .badge{font-size:9px;padding:2px 7px}
   .proj-content{padding:24px 20px;gap:12px;order:-1}
   .proj-name{font-size:clamp(20px,5vw,28px)}
   .proj-desc{font-size:12px}

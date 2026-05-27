@@ -254,27 +254,18 @@
       </svg>
     </div>
     <div class="proj-preview">
-      <div class="chart-card">
-        <div class="chart-card-header">
-          <span class="badge b-outline-green">Model Training Performance</span>
+      <div class="proj-img-grid">
+        <div class="proj-img-wrap">
+          <img src="assets/project-1/derma-aid-1.webp" alt="Derma.Aid training performance" class="proj-img" loading="lazy">
         </div>
-        <div class="chart-card-body">
-          <p>This chart displays the model's performance during the training and validation phases. The validation accuracy (val_accuracy) consistently increased with each training cycle (epoch), peaking at around 86%, while the validation loss (val_loss) showed a steady decrease. This visualization proves that the model developed learned effectively without significant overfitting.</p>
+        <div class="proj-img-wrap">
+          <img src="assets/project-1/derma-aid-3.jpg" alt="Derma.Aid results" class="proj-img" loading="lazy">
         </div>
-        <div class="chart-card-footer">
-          <div class="chart-stat">
-            <span class="chart-stat-num" style="color:var(--green)">86%</span>
-            <span class="chart-stat-lbl">Val Accuracy</span>
-          </div>
-          <div class="chart-stat">
-            <span class="chart-stat-num" style="color:var(--purple)">ResNet50</span>
-            <span class="chart-stat-lbl">Architecture</span>
-          </div>
-          <div class="chart-stat">
-            <span class="chart-stat-num">4K</span>
-            <span class="chart-stat-lbl">Images/Class</span>
-          </div>
-        </div>
+      </div>
+      <div class="proj-img-summary">
+        <span class="badge b-outline-green">86% Val Accuracy</span>
+        <span class="badge b-outline-purple">ResNet50</span>
+        <span class="badge b-outline-green">TensorFlow</span>
       </div>
     </div>
   </div>
@@ -334,39 +325,19 @@
       </svg>
     </div>
     <div class="proj-preview">
-      <div class="monitor-card">
-        <div class="monitor-card-header">
-          <span class="badge b-outline-purple">Production Monitoring</span>
-          <span class="badge b-outline-green">Grafana + Prometheus</span>
+      <div class="proj-img-grid">
+        <div class="proj-img-wrap">
+          <img src="assets/project-2/mlops-1.webp" alt="MLOps pipeline architecture" class="proj-img" loading="lazy">
         </div>
-        <div class="monitor-card-body">
-          <div class="monitor-metrics">
-            <div class="monitor-metric">
-              <span class="monitor-metric-icon" style="color:var(--green)">◆</span>
-              <div>
-                <span class="monitor-metric-num" style="color:var(--green)">82.9%</span>
-                <span class="monitor-metric-lbl">Binary Accuracy</span>
-              </div>
-            </div>
-            <div class="monitor-metric">
-              <span class="monitor-metric-icon" style="color:var(--purple)">■</span>
-              <div>
-                <span class="monitor-metric-num" style="color:var(--purple)">0.812</span>
-                <span class="monitor-metric-lbl">AUC Score</span>
-              </div>
-            </div>
-            <div class="monitor-metric">
-              <span class="monitor-metric-icon" style="color:var(--muted)">●</span>
-              <div>
-                <span class="monitor-metric-num">TFX</span>
-                <span class="monitor-metric-lbl">Pipeline</span>
-              </div>
-            </div>
-          </div>
+        <div class="proj-img-wrap">
+          <img src="assets/project-2/mlops-2.webp" alt="MLOps monitoring dashboard" class="proj-img" loading="lazy">
         </div>
-        <div class="monitor-card-text">
-          <p>The final pipeline features a robust production monitoring setup. Utilizing Prometheus to track latency and request volumes alongside interactive Grafana dashboards, the platform ensures continuous model evaluation. This MLOps structure effectively guarantees that the deployed loan prediction model handles real-time inference seamlessly while preventing system drift and validation loss anomalies.</p>
-        </div>
+      </div>
+      <div class="proj-img-summary">
+        <span class="badge b-outline-purple">82.9% Accuracy</span>
+        <span class="badge b-outline-green">AUC 0.812</span>
+        <span class="badge b-outline-purple">TFX + Keras</span>
+        <span class="badge b-outline-green">Prometheus</span>
       </div>
     </div>
   </div>
@@ -383,32 +354,18 @@
       </svg>
     </div>
     <div class="proj-preview">
-      <div class="regression-card">
-        <div class="regression-card-header">
-          <span class="badge b-outline-green">Model Evaluation</span>
-          <span class="badge b-outline-purple">Gradient Boosting</span>
+      <div class="proj-img-grid">
+        <div class="proj-img-wrap">
+          <img src="assets/project-3/real-estate-1.webp" alt="Real estate EDA analysis" class="proj-img" loading="lazy">
         </div>
-        <div class="regression-card-body">
-          <div class="regression-metrics">
-            <div class="regression-metric regression-metric-main">
-              <span class="regression-metric-num" style="color:var(--green)">MAE &lt; 10%</span>
-              <span class="regression-metric-lbl">Mean Absolute Error</span>
-            </div>
-            <div class="regression-metric-row">
-              <div class="regression-metric regression-metric-sm">
-                <span class="regression-metric-num" style="color:var(--purple)">4</span>
-                <span class="regression-metric-lbl">Models Tested</span>
-              </div>
-              <div class="regression-metric regression-metric-sm">
-                <span class="regression-metric-num" style="color:var(--green)">GB</span>
-                <span class="regression-metric-lbl">Best Performer</span>
-              </div>
-            </div>
-          </div>
+        <div class="proj-img-wrap">
+          <img src="assets/project-3/real-estate-2.webp" alt="Real estate model evaluation" class="proj-img" loading="lazy">
         </div>
-        <div class="regression-card-text">
-          <p>Model Evaluation & Error Minimization: This section highlights the comparative performance analysis of the regression models. Following systematic hyperparameter tuning, the optimized Gradient Boosting model achieved a Mean Absolute Error (MAE) under 10%. This metric validates the model's high predictive accuracy and training efficiency, establishing it as a highly stable solution for market valuation tasks.</p>
-        </div>
+      </div>
+      <div class="proj-img-summary">
+        <span class="badge b-outline-green">MAE &lt; 10%</span>
+        <span class="badge b-outline-purple">Gradient Boosting</span>
+        <span class="badge b-outline-green">4 Models Tested</span>
       </div>
     </div>
   </div>
@@ -467,39 +424,18 @@
       </svg>
     </div>
     <div class="proj-preview">
-      <div class="safespace-card">
-        <div class="safespace-card-header">
-          <span class="badge b-outline-purple">Automated Workflows</span>
-          <span class="badge b-outline-green">Privacy-First</span>
+      <div class="proj-img-grid">
+        <div class="proj-img-wrap">
+          <img src="assets/project-4/safespace-1.png" alt="SafeSpace API architecture" class="proj-img" loading="lazy">
         </div>
-        <div class="safespace-card-body">
-          <div class="safespace-stack">
-            <div class="safespace-stack-item">
-              <span class="safespace-stack-icon" style="color:var(--purple)">⚡</span>
-              <div>
-                <span class="safespace-stack-name">FastAPI + Async SQLAlchemy</span>
-                <span class="safespace-stack-lbl">Backend Stack</span>
-              </div>
-            </div>
-            <div class="safespace-stack-item">
-              <span class="safespace-stack-icon" style="color:var(--green)">🧠</span>
-              <div>
-                <span class="safespace-stack-name">Gemini LLM Integration</span>
-                <span class="safespace-stack-lbl">Auto-Reporting API</span>
-              </div>
-            </div>
-            <div class="safespace-stack-item">
-              <span class="safespace-stack-icon" style="color:var(--muted)">🔒</span>
-              <div>
-                <span class="safespace-stack-name">UUID4 + Cascade Deletes</span>
-                <span class="safespace-stack-lbl">Anonymous Data Lifecycle</span>
-              </div>
-            </div>
-          </div>
+        <div class="proj-img-wrap">
+          <img src="assets/project-4/safespace-3.png" alt="SafeSpace data flow" class="proj-img" loading="lazy">
         </div>
-        <div class="safespace-card-text">
-          <p>Automated Workflows &amp; Secure Data Lifecycles: This architecture highlights the seamless combination of asynchronous API endpoints and generative AI automation. By maintaining asynchronous database connections and a localized Kubernetes cluster layout, the API safely transforms raw data into structured incident forms while enforcing strict cryptographic and database policies to preserve complete user anonymity and data safety.</p>
-        </div>
+      </div>
+      <div class="proj-img-summary">
+        <span class="badge b-outline-purple">FastAPI + Async SQL</span>
+        <span class="badge b-outline-green">Gemini LLM</span>
+        <span class="badge b-outline-purple">Kubernetes</span>
       </div>
     </div>
   </div>
@@ -516,42 +452,18 @@
       </svg>
     </div>
     <div class="proj-preview">
-      <div class="afc-card">
-        <div class="afc-card-header">
-          <span class="badge b-outline-green">Isolation Forest</span>
-          <span class="badge b-outline-purple">XAI Explainer</span>
+      <div class="proj-img-grid">
+        <div class="proj-img-wrap">
+          <img src="assets/project-5/afc-2.png" alt="AFC-CAE anomaly detection" class="proj-img" loading="lazy">
         </div>
-        <div class="afc-card-body">
-          <div class="afc-pipeline">
-            <div class="afc-pipe-step">
-              <div class="afc-pipe-dot" style="background:var(--green)"></div>
-              <div class="afc-pipe-line"></div>
-              <div>
-                <span class="afc-pipe-name">Schema Validator</span>
-                <span class="afc-pipe-lbl">Ingestion Gate</span>
-              </div>
-            </div>
-            <div class="afc-pipe-step">
-              <div class="afc-pipe-dot" style="background:var(--purple)"></div>
-              <div class="afc-pipe-line"></div>
-              <div>
-                <span class="afc-pipe-name">Isolation Forest</span>
-                <span class="afc-pipe-lbl">Anomaly Detection</span>
-              </div>
-            </div>
-            <div class="afc-pipe-step">
-              <div class="afc-pipe-dot" style="background:var(--muted)"></div>
-              <div class="afc-pipe-line afc-pipe-line-last"></div>
-              <div>
-                <span class="afc-pipe-name">XAI Explainer</span>
-                <span class="afc-pipe-lbl">Compliance Logs</span>
-              </div>
-            </div>
-          </div>
+        <div class="proj-img-wrap">
+          <img src="assets/project-5/afc-3.png" alt="AFC-CAE compliance logs" class="proj-img" loading="lazy">
         </div>
-        <div class="afc-card-text">
-          <p>Continuous Evaluation &amp; Explainable AI: This layout displays the modular orchestration of the AFC-CAE pipeline. It maps the automated transition from raw data ingestion and schema gating, through the Isolation Forest anomaly detection, to the generation of regulatory compliance logs. The architecture guarantees a highly secure, traceable, and sub-second evaluation workflow suitable for high-throughput enterprise risk mitigation.</p>
-        </div>
+      </div>
+      <div class="proj-img-summary">
+        <span class="badge b-outline-green">Isolation Forest</span>
+        <span class="badge b-outline-purple">XAI Explainer</span>
+        <span class="badge b-outline-green">FastAPI</span>
       </div>
     </div>
   </div>
@@ -588,30 +500,27 @@
       <h2 class="reveal" style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(30px,4.5vw,56px);line-height:1.1">
         Get In <span class="hl-g">Touch</span>
       </h2>
-      <p class="reveal d1" style="font-size:13px;color:var(--muted);margin-top:10px;max-width:400px">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus.
-      </p>
     </div>
 
     <div class="contact-cards">
-      <div class="c-card reveal d1">
+      <a href="mailto:akbarariffianto04@gmail.com" style="text-decoration:none;color:inherit" class="c-card reveal d1">
         <div class="c-icon g">✉️</div>
         <div class="c-lbl">Email</div>
-        <div class="c-detail">akbar.lorem@ipsum.com<br>Lorem ipsum dolor sit amet consectetur adipiscing.</div>
-        <button class="c-btn">Send Email</button>
-      </div>
-      <div class="c-card reveal d2">
+        <div class="c-detail">akbarariffianto04@gmail.com</div>
+        <span class="c-btn">Send Email</span>
+      </a>
+      <a href="https://wa.link/xgv01m" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit" class="c-card reveal d2">
         <div class="c-icon g">💬</div>
         <div class="c-lbl">WhatsApp</div>
-        <div class="c-detail">+62 821 xxxx xxxx<br>Consectetur adipiscing elit ut aliquam purus sit.</div>
-        <button class="c-btn">Message</button>
-      </div>
-      <div class="c-card reveal d3">
+        <div class="c-detail">+62 831-6722-3003</div>
+        <span class="c-btn">Message</span>
+      </a>
+      <a href="https://www.linkedin.com/in/akbar-ariffianto/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit" class="c-card reveal d3">
         <div class="c-icon p">💼</div>
         <div class="c-lbl">LinkedIn</div>
-        <div class="c-detail">linkedin.com/in/akbar-lorem<br>Pellentesque habitant morbi tristique senectus netus.</div>
-        <button class="c-btn">Connect</button>
-      </div>
+        <div class="c-detail">linkedin.com/in/akbar-ariffianto</div>
+        <span class="c-btn">Connect</span>
+      </a>
     </div>
 
     <div class="reveal d4" style="font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);text-align:center">
@@ -628,6 +537,20 @@
     <div class="modal-actions">
       <button class="modal-btn modal-btn-yes" id="modal-yes">Yes, Open Link</button>
       <button class="modal-btn modal-btn-no" id="modal-no">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="img-modal">
+  <div class="img-modal-box">
+    <button class="img-modal-close" id="img-modal-close">&times;</button>
+    <div class="img-modal-controls">
+      <button class="img-ctrl-btn" id="img-zoom-in" title="Zoom In">+</button>
+      <button class="img-ctrl-btn" id="img-zoom-out" title="Zoom Out">&minus;</button>
+      <button class="img-ctrl-btn" id="img-zoom-reset" title="Reset">&#8634;</button>
+    </div>
+    <div class="img-modal-body" id="img-modal-body">
+      <img id="img-modal-full" src="" alt="">
     </div>
   </div>
 </div>
