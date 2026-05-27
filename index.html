@@ -7,6 +7,27 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        syne: ['Syne', 'sans-serif'],
+        dm: ['DM Sans', 'sans-serif'],
+        mono: ['Space Mono', 'monospace'],
+      },
+      colors: {
+        dark: '#060606',
+        green: '#B4FF2D',
+        purple: '#A855F7',
+        muted: '#707070',
+        panel: '#101010',
+      },
+    },
+  },
+}
+</script>
 </head>
 <body>
 
@@ -29,95 +50,60 @@
 <!-- ════════════════════════════════════
   HERO — HOME
 ════════════════════════════════════ -->
-<section id="home">
+<section id="home" class="relative min-h-[calc(100dvh-68px)] flex flex-col items-center justify-center overflow-hidden">
 
-  <!-- Left: photo + waves -->
-  <div class="hero-left">
-    <!-- Animated SVG wave bg -->
-    <svg class="hero-waves" viewBox="0 0 600 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <radialGradient id="rg1" cx="30%" cy="65%" r="55%">
-          <stop offset="0%" stop-color="#B4FF2D" stop-opacity=".28"/>
-          <stop offset="100%" stop-color="#B4FF2D" stop-opacity="0"/>
-        </radialGradient>
-        <radialGradient id="rg2" cx="72%" cy="28%" r="50%">
-          <stop offset="0%" stop-color="#A855F7" stop-opacity=".32"/>
-          <stop offset="100%" stop-color="#A855F7" stop-opacity="0"/>
-        </radialGradient>
-      </defs>
-      <ellipse cx="170" cy="460" rx="250" ry="200" fill="url(#rg1)"/>
-      <ellipse cx="460" cy="180" rx="200" ry="160" fill="url(#rg2)"/>
-      <!-- Organic blobs -->
-      <path d="M0 350 Q120 220 300 370 Q460 510 600 420 L600 700 L0 700Z" fill="rgba(180,255,45,.055)">
-        <animate attributeName="d" dur="8s" repeatCount="indefinite"
-          values="M0 350 Q120 220 300 370 Q460 510 600 420 L600 700 L0 700Z;
-                  M0 380 Q140 240 310 350 Q470 480 600 400 L600 700 L0 700Z;
-                  M0 350 Q120 220 300 370 Q460 510 600 420 L600 700 L0 700Z"/>
-      </path>
-      <path d="M0 180 Q120 80 300 220 Q450 360 600 280 L600 0 L0 0Z" fill="rgba(168,85,247,.07)">
-        <animate attributeName="d" dur="10s" repeatCount="indefinite"
-          values="M0 180 Q120 80 300 220 Q450 360 600 280 L600 0 L0 0Z;
-                  M0 160 Q140 60 310 200 Q460 340 600 250 L600 0 L0 0Z;
-                  M0 180 Q120 80 300 220 Q450 360 600 280 L600 0 L0 0Z"/>
-      </path>
-      <!-- Flowing lines -->
-      <path d="M30 320 Q180 180 370 300 Q520 420 590 360" stroke="rgba(180,255,45,.35)" stroke-width="1.5" fill="none" stroke-linecap="round">
-        <animate attributeName="stroke-dashoffset" from="600" to="0" dur="3s" repeatCount="indefinite"/>
-        <animate attributeName="stroke-dasharray" values="0 600;300 300;0 600" dur="3s" repeatCount="indefinite"/>
-      </path>
-      <path d="M20 240 Q200 140 380 240 Q520 340 590 260" stroke="rgba(168,85,247,.3)" stroke-width="1" fill="none" stroke-linecap="round">
-        <animate attributeName="stroke-dashoffset" from="600" to="0" dur="4s" repeatCount="indefinite"/>
-        <animate attributeName="stroke-dasharray" values="0 600;200 400;0 600" dur="4s" repeatCount="indefinite"/>
-      </path>
-    </svg>
+  <!-- Animated SVG wave bg -->
+  <svg class="hero-waves" viewBox="0 0 600 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="rg1" cx="30%" cy="65%" r="55%">
+        <stop offset="0%" stop-color="#B4FF2D" stop-opacity=".28"/>
+        <stop offset="100%" stop-color="#B4FF2D" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="rg2" cx="72%" cy="28%" r="50%">
+        <stop offset="0%" stop-color="#A855F7" stop-opacity=".32"/>
+        <stop offset="100%" stop-color="#A855F7" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <ellipse cx="170" cy="460" rx="250" ry="200" fill="url(#rg1)"/>
+    <ellipse cx="460" cy="180" rx="200" ry="160" fill="url(#rg2)"/>
+    <path d="M0 350 Q120 220 300 370 Q460 510 600 420 L600 700 L0 700Z" fill="rgba(180,255,45,.055)">
+      <animate attributeName="d" dur="8s" repeatCount="indefinite"
+        values="M0 350 Q120 220 300 370 Q460 510 600 420 L600 700 L0 700Z;
+                M0 380 Q140 240 310 350 Q470 480 600 400 L600 700 L0 700Z;
+                M0 350 Q120 220 300 370 Q460 510 600 420 L600 700 L0 700Z"/>
+    </path>
+    <path d="M0 180 Q120 80 300 220 Q450 360 600 280 L600 0 L0 0Z" fill="rgba(168,85,247,.07)">
+      <animate attributeName="d" dur="10s" repeatCount="indefinite"
+        values="M0 180 Q120 80 300 220 Q450 360 600 280 L600 0 L0 0Z;
+                M0 160 Q140 60 310 200 Q460 340 600 250 L600 0 L0 0Z;
+                M0 180 Q120 80 300 220 Q450 360 600 280 L600 0 L0 0Z"/>
+    </path>
+    <path d="M30 320 Q180 180 370 300 Q520 420 590 360" stroke="rgba(180,255,45,.35)" stroke-width="1.5" fill="none" stroke-linecap="round">
+      <animate attributeName="stroke-dashoffset" from="600" to="0" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dasharray" values="0 600;300 300;0 600" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M20 240 Q200 140 380 240 Q520 340 590 260" stroke="rgba(168,85,247,.3)" stroke-width="1" fill="none" stroke-linecap="round">
+      <animate attributeName="stroke-dashoffset" from="600" to="0" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dasharray" values="0 600;200 400;0 600" dur="4s" repeatCount="indefinite"/>
+    </path>
+  </svg>
 
-    <!-- Photo card -->
-    <div class="hero-card reveal from-left">
-      <div class="hero-person">
-        <svg width="240" height="320" viewBox="0 0 240 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Glow halos -->
-          <ellipse cx="120" cy="90" rx="60" ry="60" fill="rgba(168,85,247,.08)"/>
-          <!-- Head -->
-          <circle cx="120" cy="88" r="46" fill="#1e1e1e" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
-          <!-- Face details -->
-          <ellipse cx="105" cy="88" rx="9" ry="6" fill="rgba(255,255,255,.04)" stroke="rgba(180,255,45,.6)" stroke-width="1.5"/>
-          <ellipse cx="134" cy="88" rx="9" ry="6" fill="rgba(255,255,255,.04)" stroke="rgba(180,255,45,.6)" stroke-width="1.5"/>
-          <line x1="114" y1="88" x2="125" y2="88" stroke="rgba(180,255,45,.6)" stroke-width="1.5"/>
-          <!-- Pupils -->
-          <circle cx="105" cy="88" r="3" fill="rgba(180,255,45,.4)"/>
-          <circle cx="134" cy="88" r="3" fill="rgba(180,255,45,.4)"/>
-          <!-- Headphones arc -->
-          <path d="M74 86 Q74 44 120 44 Q166 44 166 86" stroke="rgba(168,85,247,.85)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-          <rect x="68" y="80" width="13" height="19" rx="6.5" fill="rgba(168,85,247,.7)"/>
-          <rect x="159" y="80" width="13" height="19" rx="6.5" fill="rgba(168,85,247,.7)"/>
-          <!-- Mouth suggestion -->
-          <path d="M110 102 Q120 108 130 102" stroke="rgba(255,255,255,.15)" stroke-width="1" fill="none" stroke-linecap="round"/>
-          <!-- Body -->
-          <path d="M50 200 Q54 158 120 148 Q186 158 190 200 L196 320 L44 320Z" fill="#181818"/>
-          <path d="M105 148 L120 172 L135 148" stroke="rgba(255,255,255,.07)" stroke-width="1" fill="none"/>
-          <!-- collar detail -->
-          <path d="M108 148 L120 168 L132 148" stroke="rgba(180,255,45,.15)" stroke-width="1" fill="none"/>
-          <!-- Ground line glow -->
-          <ellipse cx="120" cy="315" rx="70" ry="8" fill="rgba(180,255,45,.12)"/>
-        </svg>
-      </div>
-    </div>
+  <!-- Ambient background glows -->
+  <div class="hero-bg-glow hero-bg-glow--green"></div>
+  <div class="hero-bg-glow hero-bg-glow--purple"></div>
 
-    <div class="scroll-hint">SCROLL</div>
-  </div>
-
-  <!-- Right: text -->
-  <div class="hero-right">
+  <!-- Text content -->
+  <div class="hero-content relative z-10 flex flex-col items-center text-center gap-8 sm:gap-10 md:gap-4 w-full max-w-3xl px-4 sm:px-6">
     <div class="hero-intro tr1">
       <span class="hello-pill">👋 Hello!</span>
     </div>
 
-    <h1 class="hero-heading">
+    <h1 class="hero-heading font-syne font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight flex flex-col gap-2">
       <div class="tr2">I'm <span class="hl-g">Akbar,</span></div>
-      <div class="tr3">I'm a <span class="hl-p">Machine<br>Learning Engineer</span></div>
+      <div class="tr3"><span class="hl-p">Full Stack<br>AI Engineer</span></div>
     </h1>
 
-    <p class="hero-desc tr4">
+    <p class="hero-desc text-sm md:text-base leading-relaxed sm:leading-relaxed tr4">
       Dedicated to building
       <span class="ib g">Machine Learning</span> or
       <span class="ib p">AI Solutions</span>
@@ -126,9 +112,9 @@
       into every deployed system.
     </p>
 
-    <div class="hero-cta tr5">
-      <button class="btn-primary" onclick="scrollTo('about')">View My Work ↓</button>
-      <button class="btn-ghost">Download CV</button>
+    <div class="hero-cta flex flex-col sm:flex-row w-full sm:w-auto gap-3 sm:gap-4 items-center justify-center tr5">
+      <button class="btn-primary w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-3.5 text-sm sm:text-base" onclick="scrollTo('about')">View My Work ↓</button>
+      <button class="btn-ghost w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-3.5 text-sm sm:text-base">Download CV</button>
     </div>
   </div>
 </section>
@@ -142,8 +128,7 @@
 
     <div class="a-panel reveal from-left">
       <h2 class="sec-title" style="color:var(--purple);margin-bottom:18px">About Me</h2>
-      <p class="a-text">Informatics graduate specializing in Machine Learning and Deep Learning, backed by training from Bangkit Academy and AWS re/Start. Proficient in Python, TensorFlow, PyTorch, front-end integration, and cloud architectures.</p>
-      <p class="a-text d2">Certified via DCML (TensorFlow) and Associate Data Scientist (BNSP). Expert in building scalable end-to-end ML pipelines from modeling to cloud deployment. Ready to deliver immediate value as a Data Scientist or ML Engineer.</p>
+      <p class="a-text">Detail-oriented Informatics graduate specializing in Machine Learning and Deep Learning, supported by rigorous technical training from Bangkit Academy and AWS re/Start. Demonstrates advanced proficiency in Python, TensorFlow, and PyTorch, complemented by a robust understanding of front-end integration and cloud computing architectures. Professional expertise is definitively validated by Dev Certification Machine Learning with Tensorflow (DCML) and Associate Data Scientist (BNSP) credentials. Dedicated to engineering scalable and highly efficient machine learning pipelines—from initial modeling to cloud deployment—to resolve complex, real-world challenges. Positioned to deliver immediate technical value as a Data Scientist or Machine Learning Engineer.</p>
       <p class="a-text d3" style="margin-top:14px;display:flex;flex-wrap:wrap;gap:8px">
         <span class="badge b-outline-green">Machine Learning</span>
         <span class="badge b-outline-purple">Deep Learning</span>
@@ -168,8 +153,6 @@
           <span class="date-tag">Sep 2024 – Dec 2024</span>
           <ul class="edu-bullets">
             <li>Selected as one of 4,636 participants from a highly competitive pool of 45,000+ applicants across 400 Indonesian universities. Completed a rigorous incubator program focused on advanced technical competencies, soft skills, and professional English to accelerate career readiness in the technology sector.</li>
-            <li>Graduated from the Machine Learning path with an outstanding final average score of <strong>94.02/100</strong>. Mastered comprehensive technical competencies across 12 modules, including deep learning, Generative Adversarial Networks (GANs), data analysis, and TensorFlow deployment.</li>
-            <li>Launched the <strong>"derma.aid"</strong> skin disease prediction capstone as Team Lead and Machine Learning Engineer. Boosted model accuracy by <strong>16%</strong> by implementing a pre-trained ResNet50 model, applying L1/L2 regularization, and optimizing the dataset with distinct, separated data augmentation transformations.</li>
           </ul>
         </li>
       </ul>

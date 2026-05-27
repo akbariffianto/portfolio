@@ -113,14 +113,6 @@ const skillCategories = [
     title: 'Technologies & Infrastructure',
     skills: ['TensorFlow', 'AWS', 'GCP', 'Docker', 'Kubernetes', 'Grafana', 'Prometheus', 'PostgreSQL', 'Git', 'Tailwind CSS', 'Figma']
   },
-  {
-    title: 'Core Domains & Professional Skills',
-    skills: ['Computer Vision', 'Deep Learning', 'Machine Learning', 'Analytical Thinking', 'Problem Solving', 'Team Leadership']
-  },
-  {
-    title: 'Languages',
-    skills: ['English (TOEFL 537)', 'Bahasa Indonesia']
-  }
 ];
 
 const skillsContent = document.getElementById('skills-content');
@@ -206,14 +198,6 @@ const trainings = [
     issuer: 'Bangkit Academy',
     date: 'Sep 2024 - Dec 2024',
     url: 'https://drive.google.com/file/d/1zcT1FS2EuN8GOzk2Xr8iiOgqUB7QLMZZ/view?usp=drive_link'
-  },
-  {
-    icon: '📜',
-    name: 'Dicoding Academy',
-    subtitle: '33 Certificates',
-    issuer: 'Dicoding Academy',
-    date: '2022 - Present',
-    url: 'https://www.dicoding.com/users/akbar04/academies'
   }
 ];
 
