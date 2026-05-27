@@ -339,3 +339,33 @@ document.querySelector('.wrap').addEventListener('click',e=>{
   const img = e.target.closest('.proj-img');
   if(img) openImgModal(img.src);
 });
+
+// ═══════════════════════════════════════════════════════════════
+// CV MODAL
+// ═══════════════════════════════════════════════════════════════
+
+const cvModal = document.getElementById('cv-modal');
+const cvBtn = document.getElementById('btn-view-cv');
+const cvClose = document.getElementById('cv-modal-close');
+
+if (cvBtn && cvModal) {
+  cvBtn.addEventListener('click', () => {
+    cvModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+}
+
+function closeCVModal() {
+  cvModal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+cvClose?.addEventListener('click', closeCVModal);
+
+cvModal?.addEventListener('click', e => {
+  if (e.target === cvModal) closeCVModal();
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && cvModal?.classList.contains('open')) closeCVModal();
+});

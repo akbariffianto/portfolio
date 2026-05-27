@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Akbar | Machine Learning Engineer</title>
+<link rel="icon" href="assets/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -33,7 +34,7 @@ tailwind.config = {
 
 <!-- ════════════════ NAV ════════════════ -->
 <nav>
-  <a href="#home" class="logo">A</a>
+  <a href="#home" class="logo"><img src="assets/icon.png" alt="Akbar"></a>
   <ul class="nav-links" id="nav-links">
     <li><a href="#home" class="active">Home</a></li>
     <li><a href="#about">About &amp; Education</a></li>
@@ -113,8 +114,8 @@ tailwind.config = {
     </p>
 
     <div class="hero-cta flex flex-col sm:flex-row w-full sm:w-auto gap-3 sm:gap-4 items-center justify-center tr5">
-      <button class="btn-primary w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-3.5 text-sm sm:text-base" onclick="scrollTo('about')">View My Work ↓</button>
-      <button class="btn-ghost w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-3.5 text-sm sm:text-base">Download CV</button>
+      <button class="btn-primary hero-btn w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-3.5 text-sm sm:text-base" onclick="scrollTo('about')">View My Work ↓</button>
+      <button class="btn-cv hero-btn w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-3.5 text-sm sm:text-base" id="btn-view-cv">View CV</button>
     </div>
   </div>
 </section>
@@ -535,6 +536,13 @@ tailwind.config = {
     <div class="img-modal-body" id="img-modal-body">
       <img id="img-modal-full" src="" alt="">
     </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="cv-modal">
+  <div class="cv-modal-box">
+    <button class="cv-modal-close" id="cv-modal-close">&times;</button>
+    <iframe src="assets/CV_Akbar Ariffianto.pdf" class="cv-iframe"></iframe>
   </div>
 </div>
 
