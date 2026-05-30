@@ -39,7 +39,7 @@ tailwind.config = {
     <li><a href="#home" class="active">Home</a></li>
     <li><a href="#about">About &amp; Education</a></li>
     <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Sertifikasi, Training &amp; Skills</a></li>
+    <li><a href="#skills">Certifications, Training &amp; Skills</a></li>
     <li><a href="#project-1">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -101,7 +101,6 @@ tailwind.config = {
 
     <h1 class="hero-heading font-syne font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight flex flex-col gap-4 sm:gap-6">
       <div class="tr2">I'm <span class="hl-g">Akbar,</span></div>
-      <div class="tr3"><span class="hl-p">AI Engineer</span></div>
     </h1>
 
     <p class="hero-desc text-sm md:text-base leading-relaxed sm:leading-relaxed tr4">
@@ -178,7 +177,7 @@ tailwind.config = {
     <div class="exp-grid">
       <div class="exp-card reveal d1" style="grid-column:1/-1">
         <div class="exp-co">Refactory <span class="exp-loc">| Yogyakarta, Indonesia</span></div>
-        <div class="exp-role">Junior Full-Stack Engineer Trainee</div>
+        <div class="exp-role">Full-Stack Developer Trainee</div>
         <span class="date-tag">March 2026 – May 2026</span>
 
         <ul class="exp-bullets">
@@ -194,19 +193,19 @@ tailwind.config = {
 </section>
 
 <!-- ════════════════════════════════════
-  SERTIFIKASI, TRAINING & SKILLS
+  CERTIFICATIONS, TRAINING & SKILLS
 ════════════════════════════════════ -->
 <section id="skills">
   <div style="max-width:1200px;width:100%;margin:0 auto;padding:36px 0">
     <div class="reveal" style="text-align:center;margin-bottom:36px">
-      <h2 class="sec-title">Sertifikasi, Training &amp; <span class="hl-g">Skills</span></h2>
+      <h2 class="sec-title">Certifications, Training &amp; <span class="hl-g">Skills</span></h2>
     </div>
 
     <div class="skills-grid">
 
       <!-- CERTS -->
       <div class="sk-panel reveal d1">
-        <div class="sk-panel-title"><div class="sk-icon g">🏅</div>Sertifikasi</div>
+        <div class="sk-panel-title"><div class="sk-icon g">🏅</div>Certifications</div>
         <ul class="cert-list" id="cert-list"></ul>
       </div>
 
@@ -227,252 +226,9 @@ tailwind.config = {
 </section>
 
 <!-- ════════════════════════════════════
-  PROJECT 1
+  PROJECTS (rendered by JS)
 ════════════════════════════════════ -->
-<section id="project-1" class="proj-sec">
-  <div class="proj-visual reveal from-left">
-    <div class="proj-vis-bg">
-      <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="120" cy="400" rx="200" ry="180" fill="rgba(180,255,45,.07)"/>
-        <ellipse cx="400" cy="180" rx="160" ry="140" fill="rgba(168,85,247,.09)"/>
-      </svg>
-    </div>
-    <div class="proj-preview">
-      <div class="proj-img-grid">
-        <div class="proj-img-wrap">
-          <img src="assets/project-1/derma-aid-1.webp" alt="Derma.Aid training performance" class="proj-img" loading="lazy">
-        </div>
-        <div class="proj-img-wrap">
-          <img src="assets/project-1/derma-aid-3.jpg" alt="Derma.Aid results" class="proj-img" loading="lazy">
-        </div>
-      </div>
-      <div class="proj-img-summary">
-        <span class="badge b-outline-green">86% Val Accuracy</span>
-        <span class="badge b-outline-purple">ResNet50</span>
-        <span class="badge b-outline-green">TensorFlow</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="proj-content">
-    <div class="proj-num reveal d1">01 / 05</div>
-    <h2 class="proj-name reveal d2">Derma.<span class="hl-g">Aid</span></h2>
-    <div class="proj-meta reveal d3">
-      <span class="proj-meta-tag"><strong>December 2024</strong></span>
-      <span class="proj-meta-tag"><strong>Role:</strong> Project Leader &amp; Machine Learning Engineer</span>
-    </div>
-    <p class="proj-desc reveal d4">The Derma.Aid project was created to address the gap in skin healthcare in Indonesia, especially in remote areas like Sumba, NTT, which have very limited access to dermatologists. Skin diseases rank as the third most common illness in the country, yet there is an uneven distribution of specialists. To tackle these challenges, we developed Derma.Aid, an AI-based teledermatology application that provides fast, secure, and private early diagnoses.</p>
-    <p class="proj-desc reveal d5">As the Machine Learning Engineer, my primary responsibility was building the skin disease detection model. The model was built using TensorFlow and transfer learning with the ResNet50 architecture. We balanced the dataset to 4,000 images per class using oversampling/undersampling techniques and trained it on Google Colab using a T4 GPU. The optimized model achieved 86% accuracy on validation data and was saved in both .keras and .tflite formats for cloud and mobile deployment.</p>
-    <div class="proj-actions reveal d6">
-      <a href="https://github.com/DermaAid/DermaAid-ML" target="_blank" rel="noopener noreferrer" class="act-btn act-gh">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.3-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
-        GitHub
-      </a>
-      <span class="act-btn act-demo disabled">
-        Demo N/A
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17l9-9M17 17V8H8"/></svg>
-      </span>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════
-  PROJECT 2
-════════════════════════════════════ -->
-<section id="project-2" class="proj-sec alt">
-  <div class="proj-content">
-    <div class="proj-num reveal d1">02 / 05</div>
-    <h2 class="proj-name reveal d2">MLOps <span class="hl-p">Loan Approval</span></h2>
-    <div class="proj-meta reveal d3">
-      <span class="proj-meta-tag"><strong>February 2025</strong></span>
-      <span class="proj-meta-tag"><strong>Role:</strong> Machine Learning Developer</span>
-    </div>
-    <p class="proj-desc reveal d4">This project automates the loan approval process by building a scalable, automated machine learning pipeline to predict applicant eligibility based on data fields like income and credit history. Built using TensorFlow Extended (TFX) and integrated with TensorFlow Transform (TFT), the system automates the entire lifecycle from robust feature engineering to automated data validation, addressing the critical real-world need for production-grade maintainability in financial context deployment.</p>
-    <p class="proj-desc reveal d5">The architecture features a Keras-based deep learning model optimized via Keras Tuner, achieving an 82.9% binary accuracy and an AUC score of 0.812. The final containerized pipeline is served via TF-Serving with Docker and deployed to the cloud on the Railway platform. To ensure long-term stability and system reliability, a continuous observability monitoring stack was established using Prometheus and Grafana to visualize real-time performance metrics.</p>
-    <div class="proj-actions reveal d6">
-      <a href="https://github.com/akbariffianto/mlops-loan-approval" target="_blank" rel="noopener noreferrer" class="act-btn act-gh">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.3-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
-        GitHub
-      </a>
-      <span class="act-btn act-demo disabled">
-        Demo N/A
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17l9-9M17 17V8H8"/></svg>
-      </span>
-    </div>
-  </div>
-
-  <div class="proj-visual reveal from-right" style="background:linear-gradient(135deg,#0f0820,#1a1a1a)">
-    <div class="proj-vis-bg">
-      <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="380" cy="200" rx="200" ry="180" fill="rgba(168,85,247,.09)"/>
-        <ellipse cx="150" cy="450" rx="160" ry="140" fill="rgba(180,255,45,.05)"/>
-      </svg>
-    </div>
-    <div class="proj-preview">
-      <div class="proj-img-grid">
-        <div class="proj-img-wrap">
-          <img src="assets/project-2/mlops-1.webp" alt="MLOps pipeline architecture" class="proj-img" loading="lazy">
-        </div>
-        <div class="proj-img-wrap">
-          <img src="assets/project-2/mlops-2.webp" alt="MLOps monitoring dashboard" class="proj-img" loading="lazy">
-        </div>
-      </div>
-      <div class="proj-img-summary">
-        <span class="badge b-outline-purple">82.9% Accuracy</span>
-        <span class="badge b-outline-green">AUC 0.812</span>
-        <span class="badge b-outline-purple">TFX + Keras</span>
-        <span class="badge b-outline-green">Prometheus</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════
-  PROJECT 3
-════════════════════════════════════ -->
-<section id="project-3" class="proj-sec">
-  <div class="proj-visual reveal from-left" style="background:linear-gradient(135deg,#081208,#1a1a1a)">
-    <div class="proj-vis-bg">
-      <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="100" cy="350" rx="200" ry="160" fill="rgba(180,255,45,.07)"/>
-      </svg>
-    </div>
-    <div class="proj-preview">
-      <div class="proj-img-grid">
-        <div class="proj-img-wrap">
-          <img src="assets/project-3/real-estate-1.webp" alt="Real estate EDA analysis" class="proj-img" loading="lazy">
-        </div>
-        <div class="proj-img-wrap">
-          <img src="assets/project-3/real-estate-2.webp" alt="Real estate model evaluation" class="proj-img" loading="lazy">
-        </div>
-      </div>
-      <div class="proj-img-summary">
-        <span class="badge b-outline-green">MAE &lt; 10%</span>
-        <span class="badge b-outline-purple">Gradient Boosting</span>
-        <span class="badge b-outline-green">4 Models Tested</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="proj-content">
-    <div class="proj-num reveal d1">03 / 05</div>
-    <h2 class="proj-name reveal d2">Real Estate <span class="hl-g">Price Prediction</span></h2>
-    <div class="proj-meta reveal d3">
-      <span class="proj-meta-tag"><strong>December 2024</strong></span>
-      <span class="proj-meta-tag"><strong>Role:</strong> Project Leader &amp; Machine Learning Engineer</span>
-    </div>
-    <p class="proj-desc reveal d4">This project focuses on building an accurate end-to-end regression system to predict real estate prices, providing critical data-driven insights for agents and stakeholders to set competitive market prices. The workflow initiated with comprehensive Exploratory Data Analysis (EDA), robust data cleaning, and advanced correlation methods—such as Spearman analysis—to evaluate feature relationships and clean outliers before modeling.</p>
-    <p class="proj-desc reveal d5">To find the most optimal algorithm, a systematic evaluation was conducted across four distinct models: K-Nearest Neighbors, Random Forest, AdaBoost, and Gradient Boosting. The core breakthrough involved intensive hyperparameter tuning on the Gradient Boosting model. This careful optimization minimized prediction error, successfully reducing the Mean Absolute Error (MAE) to under 10% to ensure high reliability for deployment.</p>
-    <div class="proj-actions reveal d6">
-      <a href="https://github.com/akbariffianto/ml-terapan-submission/blob/main/Submission1_ML%20Terapan(2)/Laporan_Submission1(2).md" target="_blank" rel="noopener noreferrer" class="act-btn act-gh">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.3-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
-        GitHub
-      </a>
-      <span class="act-btn act-demo disabled">
-        Demo N/A
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17l9-9M17 17V8H8"/></svg>
-      </span>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════
-  PROJECT 4
-════════════════════════════════════ -->
-<section id="project-4" class="proj-sec alt">
-  <div class="proj-content">
-    <div class="proj-num reveal d1">04 / 05</div>
-    <h2 class="proj-name reveal d2"><span class="hl-p">Safe</span>Space</h2>
-    <div class="proj-meta reveal d3">
-      <span class="proj-meta-tag"><strong>February 2026</strong></span>
-      <span class="proj-meta-tag"><strong>Role:</strong> Hacker &amp; Backend Developer</span>
-    </div>
-    <p class="proj-desc reveal d4">Engineered as part of the Refactory Hackathon, SafeSpace features a highly scalable backend built with FastAPI, PostgreSQL, and asynchronous SQLAlchemy. Developed using a strict Spec-Driven Development methodology with OpenSpec to design robust architectural alignment, the entire containerized application was successfully deployed into a Kubernetes cluster via Docker to ensure high availability and efficient infrastructure orchestration.</p>
-    <p class="proj-desc reveal d5">The platform spearheaded the integration of Gemini LLM (Google Generative AI) to architect an automated reporting API that intelligently processes incident logs into formal complaint forms. Adhering to a strictly privacy-first architecture, the system implements anonymous session management utilizing UUID4 identifiers alongside strict data lifecycle enforcement—such as cascade and hard-delete mechanisms—guaranteeing permanent removal of sensitive user data.</p>
-    <div class="proj-actions reveal d6">
-      <a href="https://github.com/Anything-But-Revisi" target="_blank" rel="noopener noreferrer" class="act-btn act-gh">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.3-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
-        GitHub
-      </a>
-      <a href="https://frontend-pi-sage-59.vercel.app/landing" target="_blank" rel="noopener noreferrer" class="act-btn act-demo">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17l9-9M17 17V8H8"/></svg>
-        Live Demo
-      </a>
-    </div>
-  </div>
-
-  <div class="proj-visual reveal from-right" style="background:linear-gradient(135deg,#120820,#1a1a1a)">
-    <div class="proj-vis-bg">
-      <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="380" cy="250" rx="220" ry="180" fill="rgba(168,85,247,.1)"/>
-      </svg>
-    </div>
-    <div class="proj-preview">
-      <div class="proj-img-grid">
-        <div class="proj-img-wrap">
-          <img src="assets/project-4/safespace-1.png" alt="SafeSpace API architecture" class="proj-img" loading="lazy">
-        </div>
-        <div class="proj-img-wrap">
-          <img src="assets/project-4/safespace-3.png" alt="SafeSpace data flow" class="proj-img" loading="lazy">
-        </div>
-      </div>
-      <div class="proj-img-summary">
-        <span class="badge b-outline-purple">FastAPI + Async SQL</span>
-        <span class="badge b-outline-green">Gemini LLM</span>
-        <span class="badge b-outline-purple">Kubernetes</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════
-  PROJECT 5
-════════════════════════════════════ -->
-<section id="project-5" class="proj-sec">
-  <div class="proj-visual reveal from-left" style="background:linear-gradient(135deg,#081408,#1a1a1a)">
-    <div class="proj-vis-bg">
-      <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="150" cy="380" rx="200" ry="160" fill="rgba(180,255,45,.07)"/>
-      </svg>
-    </div>
-    <div class="proj-preview">
-      <div class="proj-img-grid">
-        <div class="proj-img-wrap">
-          <img src="assets/project-5/afc-2.png" alt="AFC-CAE anomaly detection" class="proj-img" loading="lazy">
-        </div>
-        <div class="proj-img-wrap">
-          <img src="assets/project-5/afc-3.png" alt="AFC-CAE compliance logs" class="proj-img" loading="lazy">
-        </div>
-      </div>
-      <div class="proj-img-summary">
-        <span class="badge b-outline-green">Isolation Forest</span>
-        <span class="badge b-outline-purple">XAI Explainer</span>
-        <span class="badge b-outline-green">FastAPI</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="proj-content">
-    <div class="proj-num reveal d1">05 / 05</div>
-    <h2 class="proj-name reveal d2">AFC-CAE <span class="hl-g">Engine</span></h2>
-    <div class="proj-meta reveal d3">
-      <span class="proj-meta-tag"><strong>2026</strong></span>
-      <span class="proj-meta-tag"><strong>Role:</strong> ML Engineer &amp; Backend Developer</span>
-    </div>
-    <p class="proj-desc reveal d4">The Anti-Financial Crime - Continuous Audit &amp; Evaluation (AFC-CAE) Engine is an enterprise-grade automated compliance system engineered to detect financial anomalies and streamline regulatory auditing. Built with a high-performance backend using FastAPI and structured through a secure, containerized architecture via Docker, the engine processes massive multi-part loan and transaction datasets, providing financial institutions with instant evaluation capabilities against fraud and policy drifts.</p>
-    <p class="proj-desc reveal d5">The core intelligence features an advanced ML layer integrating an Isolation Forest algorithm for unsupervised anomaly detection, combined with an XAI (Explainable AI) Explainer to ensure transparency and compliance validation. Data integrity is guaranteed via a strict Ingestion Layer utilizing a custom Schema Validator and Dtype Gate, while the specialized audit modules run deterministic compliance assertions to block high-risk activities before downstream orchestration.</p>
-    <div class="proj-actions reveal d6">
-      <a href="https://github.com/akbariffianto/afc-cae-engine" target="_blank" rel="noopener noreferrer" class="act-btn act-gh">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.3-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
-        GitHub
-      </a>
-      <a href="https://afc-cae-engine.streamlit.app/" target="_blank" rel="noopener noreferrer" class="act-btn act-demo">
-        Live Demo
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17l9-9M17 17V8H8"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
+<div id="projects-container"></div>
 
 <!-- ════════════════════════════════════
   CONTACT
@@ -508,7 +264,7 @@ tailwind.config = {
     </div>
 
     <div class="reveal d4" style="font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);text-align:center">
-      Designed &amp; Built by <span style="color:var(--green)">Akbar</span> · © 2025 · Machine Learning Engineer
+      Designed &amp; Built by <span style="color:var(--green)">Akbar</span> · © 2026 · Fresh Graduate
     </div>
   </div>
 </section>
